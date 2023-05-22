@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', cursive;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+    text-align: center;
+}
+
+h2{
+    font-size: 6em;
+    color: #444;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+h2 span{
+    transition: 1.5s;
+}
+
+h2:hover span:nth-child(1){
+    margin-right: 10px;
+}
+
+h2:hover span:nth-child(1):after{
+    content: "WORLD";
+}
+
+h2:hover span:nth-child(2){
+    margin-left: 40px;
+}
+
+h2:hover span{
+    color: #FFF;
+    text-shadow: 0 0 10px #AE00FB,
+    0 0 20px #AE00FB,
+    0 0 40px #AE00FB,
+    0 0 80px #AE00FB,
+    0 0 120px #AE00FB;
+}
