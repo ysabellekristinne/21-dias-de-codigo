@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: hidden;
+  background: #191A19;
+}
+
+.error-404 > span {
+  color: #f6f1f1;
+  font-size: 12.5rem;
+  text-shadow: 5px 5px 1px var(--gray-600);
+}
+
+.error-404 > span:first-child {
+  margin-right: 6px;
+}
+
+.error-404 > span:last-child {
+  margin-left: 6px;
+}
+
+.eyes {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.eye {
+  width: 120px;
+  height: 170px;
+  background: #f6f1f1;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+
+.ball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #191A19;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 12px solid #4E9F3D;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content p {
+  text-transform: uppercase;
+  color: #f6f1f1;
+  font-size: 2.5rem;
+}
+
+.content input {
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    padding: 8px 50px;
+    color: #f6f1f1;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #4E9F3D;
+}
+
+.content input:hover{
+    background: #1E5128;
+}
