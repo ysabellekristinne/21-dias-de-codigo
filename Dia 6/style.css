@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F9FBE7;
+}
+
+.card{
+    position: relative; 
+    width: 360px;
+    height: 420px;
+}
+
+.card .card-inner{
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255, .05);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0 , 0 , .2);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card .circle{
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: 2s ease-in infinite alternate;
+}
+
+.card .circle:nth-child(1){
+    width: 120px;
+    height: 120px;
+    top: -50px;
+    left: -50px;
+    background: #ECF2BB;
+    animation-name: move-up;
+}
+
+.card .circle:nth-child(2){
+    width: 180px;
+    height: 180px;
+    bottom: -80px;
+    right: -86px;
+    background: #ECF2BB;
+    animation-name: move-down;
+}
+
+@keyframes move-up{
+    to{
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes move-down{
+    to{
+        transform: translateY(10px);
+    }
+}
+
+.card .profile img{
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: 8px solid rgba(255,255,255, .05);
+}
+
+.card .profile h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 8px;
+    color: #4D2D3D;
+}
+
+.card .profile p{
+    color: #4D2D3D;
+    font-size: 1rem;
+}
+
+.card .profile{
+    transform: translateY(20px);
+    transition: .4s ease-out;
+}
+
+.card:hover .profile{
+    transform: translateY(0);
+}
+
+.card .social-icons{
+    margin-top: 30px; 
+}
+
+.card .social-icons i{
+    cursor: pointer;
+    color: #4D2D3D;
+    margin: 0 8px;
+    font-size: 24px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: .2s;
+}
+
+.card .social-icons i:hover{
+    color: #331933;
+}
+
+.card:hover .social-icons i{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .social-icons i:nth-child(1) {
+    transition-delay: .1s;
+}
+
+.card .social-icons i:nth-child(2) {
+    transition-delay: .2s;
+}
