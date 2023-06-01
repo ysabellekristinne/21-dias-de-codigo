@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.toggle{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.toggle i{
+    width: 50%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 1;
+}
+
+.toggle .ball{
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin: 7.5px;
+    transition: .3s ease-out;
+
+}
+
+input{
+    display: none;
+}
+
+
+/*Light Mode*/
+.light{
+    background: #F4F4F4;
+}
+
+.light .toggle{
+    background: #FFD966;
+}
+
+.light .toggle .sun{
+    color: #FFD966;
+}
+
+.light .toggle .moon{
+    color: #1A1C20;
+}
+
+.light .toggle .ball{
+    background: #F4F4F4;
+}
+
+
+/*Dark Mode*/
+.dark{
+    background: #1A1C20;
+}
+
+.dark .toggle{
+    background: #19376D;
+}
+
+.dark .toggle .sun{
+    color: #1A1C20;
+}
+
+.dark .toggle .moon{
+    color: #19376D;
+}
+
+.dark .toggle .ball{
+    background: #FAFAFA;
+    transform: translateX(60px);
+}
